@@ -18,5 +18,5 @@ func HousyRoutes(r *mux.Router) {
 	r.HandleFunc("/house", middleware.Auth(middleware.UploadThumbnail(h.AddHouse))).Methods("POST")
 	// r.HandleFunc("/house/{id}", middleware.Auth(h.UpdateHousy)).Methods("PATCH")
 	r.HandleFunc("/house/{id}", middleware.Auth(h.DeleteHousy)).Methods("DELETE")
-	// r.HandleFunc("/filter/houses?{sortBy}", (h.FilterSinglePath)).Methods("GET")
+	// r.HandleFunc("/filter/houses", (h.FilterSinglePath)).Methods("GET")
 }

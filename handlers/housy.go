@@ -173,19 +173,3 @@ func (h *handlerHousy) DeleteHousy(w http.ResponseWriter, r *http.Request) {
 	response := dto.SuccessResult{Code: http.StatusOK, Data: delete}
 	json.NewEncoder(w).Encode(response)
 }
-
-// func (h *handlerHousy) FilterSinglePath(w http.ResponseWriter, r *http.Request) {
-// 	w.Header().Set("Content-Type", "application/json")
-
-// 	house, err := h.HousyRepository.GetHouseSinglePath(id)
-// 	if err != nil {
-// 		w.WriteHeader(http.StatusBadRequest)
-// 		response := dto.ErrorResult{Code: http.StatusBadRequest, Message: err.Error()}
-// 		json.NewEncoder(w).Encode(response)
-// 		return
-// 	}
-
-// 	w.WriteHeader(http.StatusOK)
-// 	response := dto.SuccessResult{Code: http.StatusOK, Data: house}
-// 	json.NewEncoder(w).Encode(response)
-// }
